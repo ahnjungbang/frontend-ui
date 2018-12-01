@@ -1,43 +1,72 @@
-#wrapper{}
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+#wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 #header { text-align: center;margin: 20px 0px;text-decoration: none;}
-a { color:powerblue;text-decoration: none;}
+a { color: powerblue;text-decoration: none;}
 #header a { font-size: 2em;}
 
-#nav { list-style: none;text-align: left;margin: 0;padding: 0;}
+#nav { 
+    background-color: rgba(0, 0, 0, 0.048);
+    list-style: none;text-align: left;margin: 0;padding: 0;
+    overflow: hidden;
+}
 #nav li {display: inline-block;font-size: 20px;padding: 20px;}
 #nav ul li { float: left;}
 #nav ul.menus { float: left;}
+
+#nav ul.menu li.active a {
+color: rgb(73, 29, 29);
+}
+
+
+
 #nav ul.icons { float: right;}
 
-#main .featured header h2 { text-align: center;padding: 100px 40px 0px;}
-#main .featured header a img { width: 100%;}
+#main .featured {
+    background-color: #fff;
+    padding: 40px;
+}
 
-#footer { display:flex;}
+#main .featured header h2 { text-align: center;padding: 20px 0px 40px;}
+#main .featured header h2 a { font-size: 2em;}
+
+
+#main .featured header a img { width: 90%;}
+
+#footer { display: flex;
+    background-color: orange;
+
+}
 #footer .contact, #footer .info { flex: 1;}
 
-#footer .contact, .inputs { padding: 15px;}
-#footer .contact, .inputs label {
-}
+#footer .contact .inputs { padding: 20px;}
+
+/* #footer .contact .inputs label {}*/
+
 #footer .contact .inputs input {
 box-sizing: border-box;
 width: 100%;
 height: 60px;
-border: solid 3px grey; 
-margin-bottom: 30px;
+border: solid 1px grey; 
+margin-bottom: 20px;
 }
 
 #footer .contact .inputs textarea {
 box-sizing: border-box;
-width: 100;
-border: solid 3px grey;
-margin-bottom: 30px;
+width: 100%;
+border: solid 1px grey;
+margin-bottom: 20px;
 }
 
 #footer .contact .submit input {
-border: solid 3px grey;
+border: solid 1px grey;
 background-color: rgb(255,255,255);
-padding: 15px 10px;
+padding: 20px 10px;
+margin: 10px;
 }
 
 #footer .info section { display: flex; }
@@ -48,9 +77,19 @@ padding: 15px 10px;
 #copyright {
     background-color: dimgray;
     text-align: center;
-    padding: 20px;
+    padding: 20px 20px;
 }
 
-#copyright p {
-    color: #cccccc;
+#copyright p { color: #cccccc;}
+
+.bg {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/background.png) no-repeat fixed center;
+    z-index: -1;
+    opacity: .4;
 }
+
