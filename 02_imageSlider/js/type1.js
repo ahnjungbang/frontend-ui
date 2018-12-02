@@ -1,5 +1,5 @@
 $(document).ready(function() {
-$items = $("slider ul li.item");
+$items = $("#slider ul li.item");
 
 var CurrentIndex = 1;
 var imgCount = $items.length;
