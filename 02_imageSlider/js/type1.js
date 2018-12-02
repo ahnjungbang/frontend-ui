@@ -1,15 +1,18 @@
-$(document).ready(function() {
-$items = $("#slider ul li.item");
+$(document).ready(function () {
+    // 모든 이미지 아이템을 선택
+    $imgItems = $("#slider ul .item");
+    
+    // 시작할 때의 index 
+    let currentIndex = 1;
+    // 이미지 아이템의 개수
+    let imgCount = $imgItems.length;
 
-var CurrentIndex = 1;
-var imgCount = $items.length;
-
-setInterval(function() {
-    if (CurrentIndex >= imgCount) {
-        CurrentIndex = 0;
-       }
-    // 1. 모든 이미지에 active 클래스를 제어한다.
-    $items.removeClass('active');
-    $items.eq(CurrentIndex++).addClass('active');
+    // 1초간격으로 Interval 을 실행 (1000ms = 1s)
+    setInterval(() => {
+        if (currentIndex > (imgCount - 1)) {
+            currentIndex = 0;
+        }
+        $imgItems.removeClass('active')
+        $imgItems.eq(currentIndex++).addClass('active');
     }, 1000);
 });
